@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Forma | Workspace overview</title><meta name="description" content="Your business at a glance. Manage revenue, customers, transactions and team activity in Forma."/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400..800&display=swap" rel="stylesheet"/></head><body><div id="root"></div><script type="module" src="/src/main.tsx"></script><!-- anvil:made-in-anvil v1 (added by the platform) -->
+<script>(function () {
+  try {
+    if (window.top !== window.self) return;
+    if (sessionStorage.getItem('anvil-badge-hidden') === '1') return;
+  } catch (e) {}
+  function mount() {
+    if (document.getElementById('anvil-made-in')) return;
+    var host = document.createElement('div');
+    host.id = 'anvil-made-in';
+    host.style.cssText = 'position:fixed;right:16px;bottom:16px;z-index:2147483647;';
+    var root = host.attachShadow({ mode: 'open' });
+    root.innerHTML =
+      '<style>' +
+      ':host{all:initial}' +
+      '.pill{display:flex;align-items:center;gap:2px;background:#fff;color:#111;border:1px solid rgba(0,0,0,.08);' +
+      'border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.18);font:500 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;}' +
+      'a{display:flex;align-items:center;gap:7px;padding:8px 6px 8px 11px;color:inherit;text-decoration:none;letter-spacing:-.01em}' +
+      'a:hover{opacity:.75}' +
+      'button{all:unset;cursor:pointer;display:flex;align-items:center;justify-content:center;width:26px;height:26px;margin-right:4px;border-radius:7px;color:#666}' +
+      'button:hover{background:rgba(0,0,0,.06);color:#111}' +
+      'button:focus-visible,a:focus-visible{outline:2px solid #111;outline-offset:2px}' +
+      '</style>' +
+      '<div class="pill">' +
+      '<a href="https://tryanvil.dev/?ref=made-in-anvil" target="_blank" rel="noopener">' +
+      '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.5 21h4.2L12 10.9 17.3 21h4.2Z" fill="currentColor"/></svg>' +
+      '<span>Made in Anvil</span></a>' +
+      '<button type="button" aria-label="Hide the Made in Anvil badge">' +
+      '<svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>' +
+      '</button></div>';
+    root.querySelector('button').addEventListener('click', function () {
+      host.remove();
+      try { sessionStorage.setItem('anvil-badge-hidden', '1'); } catch (e) {}
+    });
+    document.body.appendChild(host);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount);
+  else mount();
+})();</script>
+<!-- /anvil:made-in-anvil -->
+</body></html>
